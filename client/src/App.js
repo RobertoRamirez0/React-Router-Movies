@@ -14,7 +14,7 @@ const App = () => {
   return (
     <div>
       <SavedList list={savedList} />
-      <Route path='/' component={MovieList} />
+      <Route path='/' render={props => <MovieList id={props.match.id}/>}/>
       <Route path='/movies/:id' component={Movie} />
     </div>
   );
